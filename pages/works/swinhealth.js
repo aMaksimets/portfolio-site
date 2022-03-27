@@ -60,7 +60,7 @@ const Work = () => {
 
                 
             <br />
-            <WorkImage src="/images/works/swinhealth_mockup.png" alt="SwinHealth" />
+            <WorkImage src="/images/works/swinhealth.png" alt="SwinHealth" />
 
             </List>
         </Container>
