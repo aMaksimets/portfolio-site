@@ -18,49 +18,46 @@ const Work = () => {
             <P>
             SwinHealth is a p2p telehealth system designed to connect 
             patients and doctors and allow video calls, realtime translation/text-to-speech,
-             file sharing etc.
-            </P>
-            <P>
-            Designed as part of final year software development project at Swinburne University.
+             file sharing etc. <br />
+             Designed as part of final year software development project at Swinburne University.
             </P>
 
             <List my={4}>
                 <ListItem>
                 <p style={{fontStyle: 'bold', color: 'grey'}}>
-            Site under construction - check back soon!
-            </p>
+                Site under construction - check back soon!
+                </p>
                 <Meta>Status</Meta>
                     <span>Prototype </span>
                     <span role='img' aria-label='construction'>🚧</span> 
                 </ListItem>
+
                 <ListItem>
-                <Meta>GitHub repository</Meta>
-                    <Link href='https://github.com/aMaksimets/swinhealth/'>
-                    github.com/aMaksimets/swinhealth/ <ExternalLinkIcon mx='2px'/>
-                    </Link>
+                <Meta>GitHub</Meta>
+                <Link href='https://github.com/aMaksimets/swinhealth/'>
+                https://github.com/aMaksimets/swinhealth/ <ExternalLinkIcon mx='2px' mt='-3px'/>
+                </Link>
                 </ListItem>
+
                 <ListItem>
                 <Meta>Stack</Meta>
-                    <span>React	&amp; Redux/MongoDB/NodeJS/WebRTC</span>
+                <span>React	and Redux/MongoDB/NodeJS/WebRTC</span>
                 </ListItem>
                 
-
                 <br />
                 <ListItem>
                 <IconContext.Provider value={{ color: '#fff', size: '3em'}}>
-                <div style={{textAlign: 'center', display : 'flex', justifyContent: 'space-around', margin: '10px 10%'}}>
+                <div style={{display : 'flex', justifyContent: 'space-around', margin: '10px 10%'}}>
                     <p><SiReact/>React</p>
                     <div style={{borderLeft: '2px solid white', borderRadius: '3px'}}/>
                     <p><IoLogoNodejs/>Node</p>
-                    <div style={{borderLeft: '2px solid white', borderRadius: '1px'}}/>
+                    <div style={{borderLeft: '2px solid white', borderRadius: '3px'}}/>
                     <p><SiMongodb/>Mongo</p>
                 </div>
                 </IconContext.Provider>
                 </ListItem>
-
-                
-            <br />
-            <WorkImage src="/images/works/swinhealth.png" alt="SwinHealth" />
+                <br />
+                <WorkImage src="/images/works/swinhealth.PNG" alt="Swinhealth" />
 
             </List>
         </Container>
