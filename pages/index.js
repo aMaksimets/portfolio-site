@@ -1,26 +1,28 @@
 import NextLink from 'next/link'
-import {Container, Box, Heading, Image, Link, useColorModeValue, Button} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import {Button, Container, Box, Heading, Image, Link, List, ListItem, SimpleGrid, useColorModeValue} from '@chakra-ui/react'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
+import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
+import {
+    IoLogoGithub,
+    IoLogoLinkedin
+} from 'react-icons/io5'
 
 const Page = () => {
     return(
         <Layout>
         <Container>
-            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
-                Hello, I&apos;m a front-end dev and CompSci student!
-            </Box>
+
+            <br />
 
             <Box display={{md:'flex'}}>
                 <Box flexGrow={1}>
                 <Heading as='h2' variant="page-title">
                 Alexey Maksimets
                 </Heading>
-                <p>Web developer, CS student</p>
-                
+                <p>( Software Engineering student / Web Dev )</p>
                 </Box>
             <Box
             flexShrink={0} 
@@ -34,42 +36,81 @@ const Page = () => {
                 maxWidth='100px'
                 display='inline-block'
                 borderRadius="full"
-                src='/images/alex.jpg'
+                src='/images/pfp.jpg'
                 alt="PFP"
                 />
             </Box>
             </Box>
             <Section delay={0.1}>
             <Heading as='h3' variant='section-title'>
-                Work
+                About
             </Heading>
             <Paragraph>
-                Alex is a Computer Science student, Freelance web developer and IT Conultant
-                <br/>Currently lead developer working on {' '}
+            Alex is a freelance front-end developer and final year 
+            Software Engineering student based in Melbourne <br /> 
+            Passionate about building &amp; contributing to projects that make people's 
+            lives better.<br/>Currently lead developer working on {' '}
             <NextLink href='/works/swinhealth'><Link>SwinHealth</Link></NextLink>
             </Paragraph>
             <Box align='center' my={4}>
                 <NextLink href='/works/'>
-                    <Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>
-                        My portfolio
+                    <Button rightIcon={<ArrowForwardIcon />} colorScheme='blue'>
+                        Things I worked on
                     </Button>
                 </NextLink>
             </Box>
             </Section>
 
-        <Section delay={0.2}>
+        <Section delay={0.15}>
             <Heading as='h3' variant='section-title'>
                 Bio
             </Heading>
+
             <BioSection>
-                <BioYear>2019</BioYear>
-                Started degree and working freelance (front-end developer)                
+                <BioYear>1999</BioYear>
+                Born in Kyiv (Київ), Ukraine
             </BioSection>
+
             <BioSection>
-                <BioYear>2022</BioYear>
-                Finishin Bachelor Computer Science
+                <BioYear>2019 - present</BioYear>
+                Bachelor of Computer Science at Swinburne Uni.<br /> 
+                Works as a freelance front-end development              
             </BioSection>
+            
         </Section>
+
+        <Section delay={0.2}>
+            <Heading as='h3' variant='section-title'>
+                Online links
+            </Heading>
+
+            <List>
+                <ListItem>
+                    <Link href="https://github.com/aMaksimets" target="_blank">
+                    <Button
+                    variant='ghost'
+                    colorSheme='teal'
+                    leftIcon={<IoLogoGithub />}
+                    >
+                        @aMaksimets
+                    </Button>
+                    </Link>
+                </ListItem>
+
+                <ListItem>
+                    <Link href="https://www.linkedin.com/in/alex-maksimets/" target="_blank">
+                    <Button
+                    variant='ghost'
+                    colorSheme='teal'
+                    leftIcon={<IoLogoLinkedin />}
+                    >
+                        alex-maksimets
+                    </Button>
+                    </Link>
+                </ListItem>
+            </List>
+        </Section>
+
         </Container>
         </Layout>
     )

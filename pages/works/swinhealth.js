@@ -1,5 +1,8 @@
 import {Container, Badge, Link, List, ListItem} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { IconContext } from 'react-icons'
+import { IoLogoNodejs } from 'react-icons/io5'
+import { SiReact, SiMongodb } from 'react-icons/si'
 import {Title, WorkImage, Meta} from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
@@ -9,19 +12,25 @@ const Work = () => {
         <Layout title='SwinHealth'>
         <Container>
             <Title>
-            SwinHealth <Badge>2022</Badge>
+            SwinHealth <Badge>2022-</Badge>
             </Title>
+            
             <P>
-            Swinhealth is a new A Telehealth platform which directly connects patients and doctors.
+            SwinHealth is a p2p telehealth system designed to connect 
+            patients and doctors and allow video calls, realtime translation/text-to-speech,
+             file sharing etc.
             </P>
-            <br />
             <P>
-            Note: Currently doesn't redirect to the website.
+            Designed as part of final year software development project at Swinburne University.
             </P>
-            <List ml={4} my={4}>
+
+            <List my={4}>
                 <ListItem>
+                <p style={{fontStyle: 'bold', color: 'grey'}}>
+            Site under construction - check back soon!
+            </p>
                 <Meta>Status</Meta>
-                    <span>Work in progress </span>
+                    <span>Prototype </span>
                     <span role='img' aria-label='construction'>🚧</span> 
                 </ListItem>
                 <ListItem>
@@ -32,10 +41,28 @@ const Work = () => {
                 </ListItem>
                 <ListItem>
                 <Meta>Stack</Meta>
-                    <span>NodeJS, React, MongoDB</span>
+                    <span>React	&amp; Redux/MongoDB/NodeJS/WebRTC</span>
                 </ListItem>
-            </List>
+                
+
+                <br />
+                <ListItem>
+                <IconContext.Provider value={{ color: '#fff', size: '3em'}}>
+                <div style={{textAlign: 'center', display : 'flex', justifyContent: 'space-around', margin: '10px 10%'}}>
+                    <p><SiReact/>React</p>
+                    <div style={{borderLeft: '2px solid white', borderRadius: '3px'}}/>
+                    <p><IoLogoNodejs/>Node</p>
+                    <div style={{borderLeft: '2px solid white', borderRadius: '1px'}}/>
+                    <p><SiMongodb/>Mongo</p>
+                </div>
+                </IconContext.Provider>
+                </ListItem>
+
+                
+            <br />
             <WorkImage src="/images/works/swinhealth_mockup.png" alt="SwinHealth" />
+
+            </List>
         </Container>
         </Layout>
     )

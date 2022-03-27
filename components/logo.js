@@ -12,26 +12,36 @@ const LogoBox = styled.span`
     height: 30px;
     line-height: 20px;
     padding: 10px;
+    img {
+        transition: 200ms ease;
+        transform: rotate(-30deg);
+        -webkit-transform: scaleX(1);
+    }
     
     &:hover img{
-        transform: rotate(20deg);
+        -webkit-transform: scaleX(-1);
+        transform: rotate(30deg);
     }
 `
 
 const Logo = () => {
     //appends string to image based on theme
-    const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+    //const flagUA = `/images/footprint${useColorModeValue('', '-dark')}.png`
+    const flagUA = `/images/UA-FLAG.png`
 
     return(
         <Link href={'/'}>
             <a>
                 <LogoBox>
-                    <Image src={footPrintImg} width={20} height={20} alt="logo"/>
-                    <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')} 
+                    <Image src={flagUA} width={40} height={40} alt="logo"/>
+                    <Text 
+                    color={useColorModeValue('gray.800', 'whiteAlpha.900')} 
                     fontFamily="M PLUS Rounded 1c"
                     fontWeight='bold'
-                    ml={3}>
-                        Alexey Maksimets
+                    ml={3}
+                    mt={3}
+                    >
+                    Alexey Maksimets
                     </Text>
                 </LogoBox>
             </a>
