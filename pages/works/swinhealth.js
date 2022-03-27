@@ -57,7 +57,7 @@ const Work = () => {
                 </IconContext.Provider>
                 </ListItem>
                 <br />
-                <WorkImage src="/images/works/swinhealth.PNG" alt="Swinhealth" />
+                <WorkImage src="/images/works/swinhealth.png" alt="Swinhealth" />
 
             </List>
         </Container>
