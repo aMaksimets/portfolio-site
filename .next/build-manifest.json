@@ -34,11 +34,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/works.js"
-    ],
-    "/works/swinhealth": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/works/swinhealth.js"
     ]
   },
   "ampFirstPages": []
