@@ -1,14 +1,13 @@
 {
-  "name": "portfolio",
+  "name": "aMaksimets-page",
   "version": "1.0.0",
   "description": "Alex's portfolio site and CSS project",
-  "main": "index.js",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "pretiter": "prettier -write .",
-    "eslint": "next lint"
+    "prettier": "prettier --write .",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "Alexey Maksimets",

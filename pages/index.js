@@ -89,7 +89,7 @@ const Page = () => {
                     <Link href="https://github.com/aMaksimets" target="_blank">
                     <Button
                     variant='ghost'
-                    colorSheme='teal'
+                    colorScheme='teal'
                     leftIcon={<IoLogoGithub />}
                     >
                         @aMaksimets
@@ -101,7 +101,7 @@ const Page = () => {
                     <Link href="https://www.linkedin.com/in/alex-maksimets/" target="_blank">
                     <Button
                     variant='ghost'
-                    colorSheme='teal'
+                    colorScheme='teal'
                     leftIcon={<IoLogoLinkedin />}
                     >
                         alex-maksimets
